@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+
+header {
+    background-color: #202124;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    height: 100px;
+    position: absolute;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #32a852;
+    transition: all ease .4s;
+    transform: scale(1.1);
+}
+
+nav li:hover a {
+    color: black;
+    transition: all ease .4s;
+}
+
+
+
+
+
+main {
+    background: rgb(100,226,255);
+    background: linear-gradient(68deg, rgba(100,226,255,0.8) 20%, rgba(50,168,82,0.8) 80%);
+}
+
+main h1 {
+    color: #32a852;
+    margin-bottom: 10px;
+}
+
+
+.slider,
+.finder {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.slide,
+.form-body {   
+    background: rgb(32, 33, 36, 0.85);
+    padding: 10px;
+    width: 100vh;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.slide-type {
+    position: absolute;
+    background-color: #202124;
+    color: #32a852;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.slide-text {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.switched-slider-btn {
+    background-color: #237539;
+    width: 7vh;
+    height: 1vh;
+    border: none;
+    margin: 5px;
+}
+
+.slider-btn {
+    background-color: #32a852;
+    width: 7vh;
+    height: 1vh;
+    border: none;
+    margin: 5px;
+}
+
+.slider-btn:hover {
+    background-color: #237539;
+    transform: scale(1.1);
+    transition: all ease .4s;
+}
+
+.switched-slider-btn:hover {
+    transform: scale(1.1);
+    transition: all ease .4s; 
+}
+
+.slide-text a {
+    color: #32a852;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.slide-text a:hover {
+    color: #237539;
+    transition: all ease .4s;
+}
+
+
+
+.form-input {
+    background: none;
+    border: none;
+    border-bottom: #32a852 2px solid;
+    color: white;
+    padding: 5px;
+    width: 50%;
+    font-size: 20px;
+}
+
+.form-input:focus {
+    border-bottom: #237539 2px solid;
+    outline:none;
+    color: #237539;
+    transition: all ease .2s;
+}
+
+.form-btn {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: #32a852 2px solid;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.form-btn:hover {
+    transform: scale(1.1);
+    transition: all ease .4s;
+    color: #237539;
+    border-color: #237539;
+}

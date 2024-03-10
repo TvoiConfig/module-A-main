@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\CSS\style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <title>Модуль А</title>
+</head>
+<body>
+    
+    <header>
+        <h4>
+            <a href="index.html"><img class="logo" src="static\IMG\logo.png" alt="Логотип"></a>
+        </h4>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Поиск</a>
+                </li>
+                <li>
+                    <a href="#">Регистрация</a>
+                </li>
+                <li>
+                    <a href="#">Личный кабинет</a>
+                </li>
+                <li>
+                    <a href="#">Добавить</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="slider">
+            <div class="slide">
+                <h1>Недавно добавленные</h1>
+                <p class="slide-type">Кот</p>
+                <img src="static\IMG\slider-1.jpg">
+
+                <p class="slide-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore ipsum pariatur 
+                    delectus omnis quidem magni eveniet deserunt nesciunt corporis cum, blanditiis temporibus beatae. 
+                    Tenetur deleniti officia eos aut neque <a href="#">подробнее...</a>
+                </p>
+
+                <button class="switched-slider-btn"></button>
+                <button class="slider-btn"></button>
+                <button class="slider-btn"></button>
+            </div>
+        </div>
+
+        <div class="finder">
+            <div class="form-body">
+                <h1>Быстрый поиск животного</h1>
+                <form>
+
+                    <input list="type" class="form-input" placeholder="Вид животного">
+                    <datalist id="type">
+                        <option>Кот</option>
+                        <option>Мышь</option>
+                        <option>Собака</option>
+                        <option>Конь</option>
+                        <option>Кошка</option>
+                        <option>Хомяк</option>
+                        <option>Нутрия</option>
+                    </datalist>
+                    <button class="form-btn">Поиск</button>
+                </form>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>
