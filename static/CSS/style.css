@@ -75,6 +75,7 @@ main h1 {
     width: 100vh;
     text-align: center;
     border-radius: 5px;
+    
 }
 
 .slide img {
@@ -172,4 +173,26 @@ main h1 {
     transition: all ease .4s;
     color: #237539;
     border-color: #237539;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width:100vh;
+}
+
+.card {
+    width: 30vh;
+}
+
+.card-img {
+    width: 30vh;
+    border-radius: 5px;
+}
+
+.card p {
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 1vh;
 }
