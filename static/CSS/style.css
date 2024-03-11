@@ -18,6 +18,10 @@ header {
     position: absolute;
 }
 
+.logo:hover {
+    transform: scale(1.1);
+    transition: all ease .4s;
+}
 nav ul {
     display: flex;
     justify-content: center;
@@ -60,7 +64,8 @@ main h1 {
 
 .slider,
 .finder,
-.about-cards {
+.about-cards,
+.find-cards {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -69,7 +74,8 @@ main h1 {
 
 .slide,
 .form-body,
-.cards-body {   
+.about-cards-body,
+.find-cards-body {   
     background: rgb(32, 33, 36, 0.85);
     padding: 10px;
     width: 100vh;
@@ -175,24 +181,59 @@ main h1 {
     border-color: #237539;
 }
 
-.cards {
+
+
+
+
+.cards-flex {
     display: flex;
     justify-content: space-between;
     width:100vh;
 }
 
-.card {
+.about-card {
     width: 30vh;
 }
 
-.card-img {
+.about-card-img {
     width: 30vh;
     border-radius: 5px;
 }
 
-.card p {
+.about-card p {
     color: white;
     font-size: 20px;
     margin-top: 5px;
     margin-left: 1vh;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+    transition: all ease .4s;
+}
+
+
+.cards-row {
+
+}
+.find-card {
+    display: flex;
+    padding-bottom: 3vh;
+}
+
+.find-card-img {
+    width: 50vh;
+}
+
+.find-card-text {
+    width: 50vh;
+    font-size: 20px;
+}
+
+.find-card-text h3 {
+    color: #32a852;
+}
+
+.find-card-text p {
+    color: white;
 }
