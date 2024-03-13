@@ -370,7 +370,7 @@ footer {
 
 
 
-/* Стили login.html */
+/* Стили login.html и register.html */
 
 .login-main {
     display: flex;
@@ -380,8 +380,8 @@ footer {
 
 .login-form {
     padding: 1vh;
-    width: 100vh;
-    height: 40vh;
+    min-width: 100vh;
+    min-height: 40vh;
     background: rgb(32, 33, 36, 0.85);
     padding: 10px;
     text-align: center;
@@ -398,7 +398,7 @@ footer {
 }
 
 .login-input {
-    width: 80vh;
+    width: 75vh;
     padding: 2vh;
     margin: 1vh;
 
@@ -411,21 +411,25 @@ footer {
 
 .btns {
     display: flex;
-    margin-left: 1vh;
 }
 
 .login-forget {
     color: white;
     margin: 1vh;
+    cursor: pointer;
 }
 
 .login-btn {
-    width: 8vh;
     padding: 1vh;
+    margin: 1vh;
     background: none;
     border: none;
     border: #32a852 2px solid;
     color: #32a852;
     font-size: 20px;
+}
 
+.login-label {
+    font-size: 14px;
+    color: white;
 }
