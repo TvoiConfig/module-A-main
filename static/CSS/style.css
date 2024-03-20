@@ -7,7 +7,8 @@
 
 
 
-header {
+header,
+footer {
     background-color: #202124;
     width: 100%;
     height: 100px;
@@ -18,6 +19,10 @@ header {
     position: absolute;
 }
 
+.logo:hover {
+    transform: scale(1.1);
+    transition: all ease .4s;
+}
 nav ul {
     display: flex;
     justify-content: center;
@@ -48,8 +53,10 @@ nav li:hover a {
 
 
 main {
+    min-height: 90vh;
     background: rgb(100,226,255);
-    background: linear-gradient(68deg, rgba(100,226,255,0.8) 20%, rgba(50,168,82,0.8) 80%);
+    background: linear-gradient(90deg, rgba(100,226,255,0.8) 20%, rgba(50,168,82,0.8) 80%);
+
 }
 
 main h1 {
@@ -60,7 +67,10 @@ main h1 {
 
 .slider,
 .finder,
-.about-cards {
+.about-cards,
+.find-cards,
+.review-slider,
+.subscribe {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -69,12 +79,16 @@ main h1 {
 
 .slide,
 .form-body,
-.cards-body {   
+.about-cards-body,
+.find-cards-body,
+.review-slider-body,
+.subscribe-body {   
     background: rgb(32, 33, 36, 0.85);
     padding: 10px;
     width: 100vh;
     text-align: center;
     border-radius: 5px;
+    
 }
 
 .slide img {
@@ -139,7 +153,8 @@ main h1 {
 
 
 
-.form-input {
+.form-input,
+.subscribe-form-input {
     background: none;
     border: none;
     border-bottom: #32a852 2px solid;
@@ -149,7 +164,9 @@ main h1 {
     font-size: 20px;
 }
 
-.form-input:focus {
+.form-input:focus,
+.subscribe-form-input:focus,
+.login-input:focus {
     border-bottom: #237539 2px solid;
     outline:none;
     color: #237539;
@@ -167,9 +184,252 @@ main h1 {
     margin: 10px;
 }
 
-.form-btn:hover {
+.form-btn:hover,
+.form-btn-row:hover,
+.login-btn:hover {
     transform: scale(1.1);
     transition: all ease .4s;
     color: #237539;
     border-color: #237539;
+}
+
+.form-btn-row {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: #32a852 2px solid;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+
+
+
+.cards-flex {
+    display: flex;
+    justify-content: space-between;
+    width:100vh;
+}
+
+.about-card {
+    width: 30vh;
+}
+
+.about-card-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about-card p {
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 1vh;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+    transition: all ease .4s;
+}
+
+.find-card {
+    display: flex;
+    margin-bottom: 3vh;
+    padding-bottom: 3vh;
+    border-bottom: #32a852 2px solid;
+}
+
+.find-card-img {
+    width: 50%;
+    border-radius: 5px;
+}
+
+.find-card-text {
+    width: 50vh;
+    font-size: 20px;
+}
+
+.find-card-text h3 {
+    color: #32a852;
+}
+
+.find-card-text p {
+    color: white;
+}
+
+.find-card:hover {
+    transform: scale(1.01);
+    transition: all ease .4s;
+}
+
+
+
+
+
+.review-slide-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.review {
+    color: white;
+    font-size: 20px;
+    
+}
+
+.review-name {
+    color: #32a852;
+    font-size: 20px;
+}
+
+.review-date {
+    color: #32a852;
+    font-size: 18px;
+}
+
+
+
+
+
+.subscribe-form {
+
+}
+
+.subsctibe-checkbox-body {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-label {
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-about {
+   
+    
+    color: white;
+    
+}
+
+
+.footer-about {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+footer {
+    line-height: 50px;
+}
+
+.footer-nav a {
+    color: #32a852;
+    text-decoration: none;
+    padding: 1vh
+}
+
+.footer-nav a:hover {
+    color: #237539;
+    transition: all ease .4s;
+}
+
+.footer-about a {
+    padding-right: 1vh;
+}
+
+.footer-about a {
+    text-decoration: none;
+    color: #32a852;
+}
+
+.footer-about a:hover,
+.login-forget:hover {
+    color: #237539;
+    transition: all ease .4s;
+}
+
+
+
+
+
+
+
+/* Стили login.html и register.html */
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    padding: 1vh;
+    min-width: 100vh;
+    min-height: 40vh;
+    background: rgb(32, 33, 36, 0.85);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+
+    
+}
+
+.login-form-body {
+    width: 80vh;
+    margin: auto;
+    
+}
+
+.login-input {
+    width: 75vh;
+    padding: 2vh;
+    margin: 1vh;
+
+    background: none;
+    border: none;
+    border-bottom: #32a852 2px solid;
+    color: white;
+    font-size: 20px;
+}
+
+.btns {
+    display: flex;
+}
+
+.login-forget {
+    color: white;
+    margin: 1vh;
+    cursor: pointer;
+}
+
+.login-btn {
+    padding: 1vh;
+    margin: 1vh;
+    background: none;
+    border: none;
+    border: #32a852 2px solid;
+    color: #32a852;
+    font-size: 20px;
+}
+
+.login-label {
+    font-size: 14px;
+    color: white;
 }
