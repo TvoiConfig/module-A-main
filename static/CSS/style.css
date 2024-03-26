@@ -10,12 +10,10 @@
 header,
 footer {
     background-color: #202124;
-    width: 100%;
-    height: 100px;
 }
 
 .logo {
-    height: 100px;
+    height: 10vh;
     position: absolute;
 }
 
@@ -26,8 +24,12 @@ footer {
 nav ul {
     display: flex;
     justify-content: center;
-    line-height: 100px;
     list-style: none;
+}
+
+nav li {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
 }
 
 nav a {
@@ -48,7 +50,16 @@ nav li:hover a {
     transition: all ease .4s;
 }
 
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    nav li {
+        padding: 2vh;
+    }
+}
 
 
 
@@ -65,12 +76,17 @@ main h1 {
 }
 
 
+
+
+/* Общие стили для позиционирования */
+
 .slider,
 .finder,
 .about-cards,
 .find-cards,
 .review-slider,
-.subscribe {
+.subscribe,
+.profile {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -82,7 +98,8 @@ main h1 {
 .about-cards-body,
 .find-cards-body,
 .review-slider-body,
-.subscribe-body {   
+.subscribe-body,
+.profile-body {   
     background: rgb(32, 33, 36, 0.85);
     padding: 10px;
     width: 100vh;
@@ -90,6 +107,14 @@ main h1 {
     border-radius: 5px;
     
 }
+
+
+
+
+
+
+
+
 
 .slide img {
     width: 100%;
@@ -160,7 +185,7 @@ main h1 {
     border-bottom: #32a852 2px solid;
     color: white;
     padding: 5px;
-    width: 50%;
+    width: 80%;
     font-size: 20px;
 }
 
@@ -214,11 +239,11 @@ main h1 {
 .cards-flex {
     display: flex;
     justify-content: space-between;
-    width:100vh;
+    
 }
 
 .about-card {
-    width: 30vh;
+    padding: 2vh;
 }
 
 .about-card-img {
@@ -229,8 +254,7 @@ main h1 {
 .about-card p {
     color: white;
     font-size: 20px;
-    margin-top: 5px;
-    margin-left: 1vh;
+
 }
 
 .about-card:hover {
@@ -238,11 +262,23 @@ main h1 {
     transition: all ease .4s;
 }
 
+@media screen and (max-width: 768px) {
+    .cards-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+}
+
+
+
+
+
 .find-card {
     display: flex;
     margin-bottom: 3vh;
     padding-bottom: 3vh;
-    border-bottom: #32a852 2px solid;
 }
 
 .find-card-img {
@@ -251,8 +287,9 @@ main h1 {
 }
 
 .find-card-text {
-    width: 50vh;
+    padding: 2vh;
     font-size: 20px;
+    width: 50%;
 }
 
 .find-card-text h3 {
@@ -266,6 +303,19 @@ main h1 {
 .find-card:hover {
     transform: scale(1.01);
     transition: all ease .4s;
+}
+
+@media screen and (max-width: 768px) {
+    .find-card {
+        flex-direction: column;
+    }
+    .find-card-img {
+        width: 100%;
+    }
+    .find-card-text {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 
@@ -364,7 +414,11 @@ footer {
     transition: all ease .4s;
 }
 
-
+@media screen and (max-width: 768px) {
+    .footer-nav ul {
+        flex-wrap: wrap;
+    }
+}
 
 
 
@@ -380,27 +434,27 @@ footer {
 
 .login-form {
     padding: 1vh;
-    min-width: 100vh;
-    min-height: 40vh;
     background: rgb(32, 33, 36, 0.85);
     padding: 10px;
     text-align: center;
     border-radius: 5px;
     font-size: 20px;
+    width: 100vh;
 
     
 }
 
 .login-form-body {
-    width: 80vh;
     margin: auto;
+    
+
     
 }
 
 .login-input {
-    width: 75vh;
     padding: 2vh;
     margin: 1vh;
+    width: 80%;
 
     background: none;
     border: none;
@@ -410,7 +464,7 @@ footer {
 }
 
 .btns {
-    display: flex;
+    
 }
 
 .login-forget {
@@ -433,3 +487,116 @@ footer {
     font-size: 14px;
     color: white;
 }
+
+.checkbox-body {
+    width: 100%;
+}
+
+
+
+
+
+/* Стили для profile.html */
+
+.profile-about ul,
+.profile-cards ul {
+    list-style: none;
+}
+
+.profile-about li,
+.profile-cards li {
+    display: flex;
+}
+
+.profile-about p {
+    color: white;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+.profile-about p b,
+.profile-cards p b {
+    color: #32a852;
+}
+
+.profile-about ul button {
+    font-size: 24px;
+    border: none;
+    background: none;
+    color: #237539;
+    cursor: pointer;
+    margin-left: 2vh;
+    border-bottom: 2px solid #237539;
+}
+
+.profile-about ul button:hover {
+    color: #32a852;
+    border-bottom: #32a852 2px solid;
+    transition: all ease .4s;
+}
+
+
+
+
+.profile-cards img {
+   width: 30%;
+   height: 30%;
+   padding-right: 3vh;
+}
+
+.profile-cards ul {
+    width: 70%;
+    height: 70%;
+}
+
+.profile-card-active,
+.profile-card-mod,
+.profile-card-completed,
+.profile-card-arhived {
+    display: flex;
+    padding: 1vh;
+    padding-bottom: 3vh;
+}
+
+.profile-cards p {
+    color: white;
+    font-size: 20px;
+    text-wrap: wrap;
+    
+}
+
+.btn-delete {
+    font-size: 24px;
+    border: none;
+    background: none;
+    color: #a53131;
+    cursor: pointer;
+    border-bottom: 2px solid #a53131;
+    margin-right: 2vh;
+}
+
+.btn-delete:hover {
+    color: #cf3e3e;
+    border-color: #cf3e3e;
+    transition: all ease .4s;
+}
+
+.btn-edit {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #b6ac36;
+    border-bottom: #b6ac36 2px solid;
+}
+
+.btn-edit:hover {
+    color: #cfc43e;
+    border-color: #cfc43e;
+    transition: all ease .4s;
+}
+
+.profile-cards h2 {
+    color: #32a852;
+}
+
